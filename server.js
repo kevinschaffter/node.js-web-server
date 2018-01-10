@@ -1,6 +1,7 @@
 const express = require('express'),
           hbs = require('hbs'),
-          fs = require('fs');
+          fs = require('fs'),
+          port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -46,4 +47,4 @@ app.get('/bad', (req, res) => {
   res.send('This is a bad URL')
 });
  
-app.listen(3000, () => console.log('server is up'));
+app.listen(port, () => console.log('server is up'));
